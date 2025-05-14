@@ -23,33 +23,33 @@ const RULES = {
  * @param {Number} requiredCount 需要满足的规则数量
  * @returns {Boolean} 是否符合规则
  */
-function meetsRuleCount(
+const meetsRuleCount = (
   pwd: string,
   rules: RegExp[],
   requiredCount: number
-): boolean {
+): boolean => {
   const matchedCount = rules.reduce(
     (count, rule) => count + Number(rule.test(pwd)),
     0
   );
   return matchedCount >= requiredCount;
-}
+};
 
 /**
  * 弱密码校验：长度大于6
  * @param {String} pwd 密码
  * @returns {Boolean} 是否为弱密码
  */
-function isLowIntensity(pwd: string = ''): boolean {
+const isLowIntensity = (pwd: string = ''): boolean => {
   return pwd.length > 6;
-}
+};
 
 /**
  * 中等密码校验：长度大于等于8，包含数字和字母
  * @param {String} pwd 密码
  * @returns {Boolean} 是否为中等密码
  */
-function isMiddleIntensity(pwd: string = ''): boolean {
+const isMiddleIntensity = (pwd: string = ''): boolean => {
   return (
     pwd.length >= 8 &&
     meetsRuleCount(
@@ -58,16 +58,16 @@ function isMiddleIntensity(pwd: string = ''): boolean {
       2
     )
   );
-}
+};
 
 /**
  * 高强度密码校验：长度大于8，包含数字、大写字母、小写字母、下划线中的三类
  * @param {String} pwd 密码
  * @returns {Boolean} 是否为高强度密码
  */
-function isHighIntensity(pwd: string = ''): boolean {
+const isHighIntensity = (pwd: string = ''): boolean => {
   return pwd.length > 8 && meetsRuleCount(pwd, Object.values(RULES), 3);
-}
+};
 
 /**
  * 生成密码验证器
@@ -75,24 +75,24 @@ function isHighIntensity(pwd: string = ''): boolean {
  * @param {String} errMsg 错误提示信息
  * @returns {Function} 验证器函数
  */
-function genValidator(checkFunc: (pwd: string) => boolean, errMsg: string) {
+const genValidator = (checkFunc: (pwd: string) => boolean, errMsg: string) => {
   return function (pwd: string) {
     const valid = checkFunc(pwd);
     return { valid, err: valid ? '' : errMsg };
   };
-}
+};
 
 /**
  * 获取密码强度
  * @param {String} pwd 密码
  * @returns {Number} 密码强度（1: 弱, 2: 中, 3: 高）
  */
-export function getPwdIntensity(pwd: string = ''): number {
+export const getPwdIntensity = (pwd: string = ''): number => {
   if (isHighIntensity(pwd)) return HIGH_STRENGTH;
   if (isMiddleIntensity(pwd)) return MIDDLE_STRENGTH;
   if (isLowIntensity(pwd)) return LOW_STRENGTH;
   return 0; // 不符合任何强度
-}
+};
 
 // 导出密码验证器
 export const pwdValidators = {

@@ -1,4 +1,10 @@
-# Rslib project
+# Universal Tools
+
+## Use
+
+```sh
+npm install universal-tools
+```
 
 ## Setup
 

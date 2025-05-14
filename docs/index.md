@@ -3,8 +3,8 @@ layout: home
 
 hero:
   name: Universal Tools
-  text: 一个现代化的 JavaScript/TypeScript 工具库，提供了一系列常用的工具函数。
-  tagline: 将 Markdown 变成优雅的文档，只需几分钟
+  text: JavaScript/TypeScript 工具库
+  tagline: 提供了一系列常用的工具函数
   actions:
     - theme: brand
       text: 什么是 Universal Tools?

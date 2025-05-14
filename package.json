@@ -1,6 +1,6 @@
 {
   "name": "universal-tools",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "type": "module",
   "exports": {
     ".": {
@@ -10,9 +10,13 @@
     }
   },
   "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "files": [
-    "dist"
+    "dist",
+    "*.d.ts",
+    "*.js",
+    "*.cjs"
   ],
   "scripts": {
     "build": "rslib build",
@@ -44,7 +48,7 @@
     "prettier": "^3.5.3",
     "typescript": "^5.8.3",
     "typescript-eslint": "^8.31.1",
-    "vitepress": "^1.6.3",
+    "vitepress": "2.0.0-alpha.5",
     "vitest": "^3.1.3"
   },
   "dependencies": {
