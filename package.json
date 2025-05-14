@@ -1,6 +1,6 @@
 {
   "name": "universal-tools",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "type": "module",
   "exports": {
     ".": {
@@ -22,7 +22,7 @@
     "build": "rslib build",
     "dev": "rslib build --watch",
     "format": "prettier --write .",
-    "lint": "eslint .",
+    "lint": "eslint src --fix --ext .ts,.tsx,.vue,.js,.jsx --max-warnings 0",
     "test": "vitest run",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
@@ -33,13 +33,17 @@
     "typescript",
     "javascript"
   ],
-  "repository": "github:FungYuu/universal-tools",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:FungYuu/universal-tools"
+  },
   "author": "FungYuu",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/FungYuu/universal-tools/issues"
   },
   "devDependencies": {
+    "@ast-grep/napi-darwin-arm64": "^0.38.0",
     "@eslint/js": "^9.25.1",
     "@rslib/core": "^0.7.0",
     "@types/node": "^22.8.1",
@@ -51,7 +55,10 @@
     "vitepress": "2.0.0-alpha.5",
     "vitest": "^3.1.3"
   },
-  "dependencies": {
-    "@ast-grep/napi-darwin-arm64": "^0.38.0"
+  "lint-staged": {
+    "src/**/*.{vue,js,jsx,ts,tsx,json}": [
+      "pnpm run lint",
+      "pnpm run format"
+    ]
   }
 }
