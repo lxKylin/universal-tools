@@ -26,6 +26,8 @@ jobs:
         with:
           version: 10
           run_install: false
+          # 可选：添加 registry 参数以确保正确下载
+          registry: https://registry.npmjs.org
 
       - name: Install Node.js
         uses: actions/setup-node@v4
