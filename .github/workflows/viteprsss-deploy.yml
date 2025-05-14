@@ -22,12 +22,10 @@ jobs:
           persist-credentials: false
 
       - name: Install pnpm
-        uses: pnpm/action-setup@v4 // 配置使用pnpm
+        uses: pnpm/action-setup@v4
         with:
           version: 10
           run_install: false
-          # 可选：添加 registry 参数以确保正确下载
-          registry: https://registry.npmjs.org
 
       - name: Install Node.js
         uses: actions/setup-node@v4
