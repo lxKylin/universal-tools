@@ -1,6 +1,7 @@
-import { defineAdditionalConfig, type DefaultTheme } from 'vitepress';
+import { defineConfig, type DefaultTheme } from 'vitepress';
 
-export default defineAdditionalConfig({
+export default defineConfig({
+  base: '/universal-tools/',
   title: 'Universal Tools',
   description: '一个实用的 JavaScript/TypeScript 工具库',
   themeConfig: {
