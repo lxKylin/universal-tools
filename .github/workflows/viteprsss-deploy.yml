@@ -21,9 +21,21 @@ jobs:
         with:
           persist-credentials: false
 
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - uses: pnpm/action-setup@v2 // 配置使用pnpm
+        name: Install pnpm
+        id: pnpm-install
+        with:
+          version: 7
+          run_install: false
+
       # 生成静态文件
       - name: Build
-        run: npm install && npm run docs:build
+        run: pnpm install && pnpm docs:build
 
       # 部署到 GitHub Pages
       - name: Deploy
