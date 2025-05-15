@@ -35,12 +35,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git@github.com:FungYuu/universal-tools"
+    "url": "git@github.com:lxKylin/universal-tools"
   },
-  "author": "FungYuu",
+  "author": "lxKylin",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/FungYuu/universal-tools/issues"
+    "url": "https://github.com/lxKylin/universal-tools/issues"
   },
   "devDependencies": {
     "@ast-grep/napi-darwin-arm64": "^0.38.0",
