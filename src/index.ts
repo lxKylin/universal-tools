@@ -6,3 +6,6 @@ export * from './utils/format-unit-size';
 
 // 导出正则校验
 export * from './utils/regex-validator';
+
+// 导入AES加密工具
+export * from './utils/aes-utils';

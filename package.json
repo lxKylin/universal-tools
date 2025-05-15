@@ -42,10 +42,14 @@
   "bugs": {
     "url": "https://github.com/lxKylin/universal-tools/issues"
   },
+  "dependencies": {
+    "crypto-js": "^4.2.0"
+  },
   "devDependencies": {
     "@ast-grep/napi-darwin-arm64": "^0.38.0",
     "@eslint/js": "^9.25.1",
     "@rslib/core": "^0.7.0",
+    "@types/crypto-js": "^4.2.2",
     "@types/node": "^22.8.1",
     "eslint": "^9.25.1",
     "globals": "^16.0.0",
