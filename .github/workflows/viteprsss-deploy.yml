@@ -2,16 +2,16 @@
 name: Deploy GitHub Pages
 
 # # 触发条件：在 push 到 main 分支后
-# on:
-#   push:
-#     branches:
-#       - main
-
-# 触发条件：tag推送后再触发
 on:
   push:
-    tags:
-      - '*'
+    branches:
+      - main
+
+# 触发条件：tag推送后再触发
+# on:
+#   push:
+#     tags:
+#       - '*'
 
 # 任务
 jobs:

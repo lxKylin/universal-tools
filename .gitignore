@@ -7,6 +7,8 @@
 node_modules
 dist/
 
+packages/docs/docs/.vitepress/cache
+
 # IDE
 .vscode/*
 !.vscode/extensions.json

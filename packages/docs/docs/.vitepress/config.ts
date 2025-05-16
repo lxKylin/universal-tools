@@ -1,13 +1,15 @@
 import { defineConfig, type DefaultTheme } from 'vitepress';
 
 export default defineConfig({
-  base: '/universal-tools/',
+  base: '/universal-tools/', // 在子路径例如 GitHub 页面下部署站点，则需要设置此项
   title: 'Universal Tools',
+  lang: 'zh-CN',
   description: '一个实用的 JavaScript/TypeScript 工具库',
   themeConfig: {
     nav: [
       { text: '指南', link: '/guide/getting-started' },
-      { text: 'API', link: '/api/' }
+      // { text: 'API', link: '/api/' },
+      { text: '函数', link: '/function/aes-utils' }
     ],
 
     search: { provider: 'local', options: searchOptions() },
@@ -23,12 +25,23 @@ export default defineConfig({
           ]
         }
       ],
-      '/api/': [
+      // '/api/': [
+      //   {
+      //     text: 'API 参考',
+      //     items: [
+      //       { text: '字符串工具', link: '/api/string' },
+      //       { text: '数组工具', link: '/api/array' }
+      //     ]
+      //   }
+      // ],
+      '/function/': [
         {
-          text: 'API 参考',
+          text: '函数',
           items: [
-            { text: '字符串工具', link: '/api/string' },
-            { text: '数组工具', link: '/api/array' }
+            { text: 'AES加密', link: '/function/aes-utils' },
+            { text: '字节转换', link: '/function/format-unit-size' },
+            { text: '密码验证器', link: '/function/password-utils' },
+            { text: '正则校验', link: '/function/regex-validator' }
           ]
         }
       ]
@@ -36,12 +49,12 @@ export default defineConfig({
     socialLinks: [
       {
         icon: 'github',
-        link: 'https://github.com/FungYuu/universal-tools'
+        link: 'https://github.com/lxKylin/universal-tools'
       }
     ],
     footer: {
       message: '基于 MIT 许可发布',
-      copyright: `版权所有 © 2019-${new Date().getFullYear()} FungYuu`
+      copyright: `版权所有 © 2025-${new Date().getFullYear()} lxKylin`
     },
 
     docFooter: {
