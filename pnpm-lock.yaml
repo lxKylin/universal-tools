@@ -8,7 +8,7 @@ importers:
 
   .: {}
 
-  packages/tool-docs:
+  packages/docs:
     dependencies:
       element-plus:
         specifier: ^2.9.10
@@ -144,6 +144,7 @@ packages:
   '@ast-grep/napi-darwin-arm64@0.38.0':
     resolution: {integrity: sha512-SxwAhwUAE3bewlhEtIdYx8tawKgP2rPnMaivs8nPPWj6w0S/xbpIZRn5SaszrwWJgqWUFPgVUSK5TyyQRPwBUQ==}
     engines: {node: '>= 10'}
+    cpu: [arm64]
     os: [darwin]
 
   '@ast-grep/napi-darwin-x64@0.37.0':
