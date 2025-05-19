@@ -4,7 +4,7 @@
 
 <Validator />
 
-::: details
+::: details validator
 <<< @/examples/regex-validator/validator.vue
 :::
 

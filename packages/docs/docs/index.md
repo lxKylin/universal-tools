@@ -3,7 +3,7 @@ layout: home
 
 hero:
   name: Universal Tools
-  text: JavaScript/TypeScript 工具库
+  text: JS/TS 工具库
   tagline: 提供了一系列常用的工具函数
   actions:
     - theme: brand
@@ -14,7 +14,7 @@ hero:
       link: /guide/getting-started
     - theme: alt
       text: GitHub
-      link: https://github.com/FungYuu/universal-tools
+      link: https://github.com/lxKylin/universal-tools
   image:
     src: /vitepress-logo-large.svg
     alt: VitePress
@@ -33,39 +33,3 @@ features:
     title: 速度真的很快！
     details: 采用静态 HTML 实现快速的页面初次加载，使用客户端路由实现快速的页面切换导航。
 ---
-
-<!-- # Universal Tools
-
-一个现代化的 JavaScript/TypeScript 工具库，提供了一系列常用的工具函数。
-
-## 特性
-
-- 🚀 完全使用 TypeScript 编写，提供完整的类型定义
-- 📦 支持 Tree Shaking，只打包你使用的功能
-- 📚 详细的文档和示例
-- ✅ 完整的测试覆盖
-- 🔧 模块化设计，易于扩展
-
-## 快速开始
-
-### 安装
-
-```bash
-npm install universal-tools
-```
-
-### 使用示例
-
-```typescript
-import { toCamelCase, unique } from 'universal-tools'
-
-// 字符串工具
-console.log(toCamelCase('hello-world')) // 'helloWorld'
-
-// 数组工具
-console.log(unique([1, 1, 2, 3, 3])) // [1, 2, 3]
-```
-
-## 贡献
-
-欢迎提交 Issue 和 Pull Request！  -->
